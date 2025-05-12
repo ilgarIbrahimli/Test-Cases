@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10033</projectId>
+    <projectKey>MT</projectKey>
+    <exportDate>2025-05-12 19:34:26 UTC</exportDate>
+    <folders/>
+    <testCases>
+        <testCase id="234928920" key="MT-T3">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Ilgar Ibrahimli</createdBy>
+            <createdOn>2025-04-20 09:28:03 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>MT-4</key>
+                    <summary><![CDATA[Add New Address in My Account / Hesabımda Yeni Ünvan əlavə edin]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[TC_IlgarIbrahimli_ValidInput]]></name>
+            <objective><![CDATA[As a logged-in user, I want to add a new address in the &quot;My Account &gt; Addresses&quot; section so that I can store my shipping information for future orders.]]></objective>
+            <owner>712020:b4da1f12-5225-4945-a347-1e80228be242</owner>
+            <precondition><![CDATA[User must be successfully logged in and navigated to &ldquo;Addresses&rdquo; section]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Login using a valid registered account]]></description>
+                        <expectedResult><![CDATA[User is successfully logged in and redirected to homepage.]]></expectedResult>
+                        <testData><![CDATA[First Name: Manual<br>Last Name: Tester<br>Email: manualtester99@gmail.com<br>Password: test1234]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Navigate to &quot;My Account &gt; Addresses&quot;]]></description>
+                        <expectedResult><![CDATA[The &quot;Addresses&quot; section is displayed with existing addresses (if any) and an option to add a new address]]></expectedResult>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Click on &quot;ADD NEW&quot; button]]></description>
+                        <expectedResult><![CDATA[A form named &quot;My account - Add new address&quot; is displayed]]></expectedResult>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Fill in all required fields with valid data]]></description>
+                        <expectedResult><![CDATA[Each field accepts input; no validation errors are shown]]></expectedResult>
+                        <testData><![CDATA[<ul><li>First name: Manual</li><li>Last name: Tester</li><li>Email: manualtester99@gmail.com</li><li style="margin-top: 4.0px;" id="isPasted"><p style="margin: 0.0px;padding: 0.0px;font-size: 1.0em;line-height: 1.714;font-weight: 400;letter-spacing: -0.005em;">Country: United States</p></li><li style="margin-top: 4.0px;"><p style="margin: 0.0px;padding: 0.0px;font-size: 1.0em;line-height: 1.714;font-weight: 400;letter-spacing: -0.005em;">State: California</p></li><li style="margin-top: 4.0px;"><p style="margin: 0.0px;padding: 0.0px;font-size: 1.0em;line-height: 1.714;font-weight: 400;letter-spacing: -0.005em;">City: Los Angeles</p></li><li style="margin-top: 4.0px;"><p style="margin: 0.0px;padding: 0.0px;font-size: 1.0em;line-height: 1.714;font-weight: 400;letter-spacing: -0.005em;">Address 1: 123 Sunset Blvd</p></li><li style="margin-top: 4.0px;"><p style="margin: 0.0px;padding: 0.0px;font-size: 1.0em;line-height: 1.714;font-weight: 400;letter-spacing: -0.005em;">Zip Code: 90001</p></li><li style="margin-top: 4.0px;"><p style="margin: 0.0px;padding: 0.0px;font-size: 1.0em;line-height: 1.714;font-weight: 400;letter-spacing: -0.005em;">Phone: +1 123 456 7890</p></li></ul>]]></testData>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[Leave optional fields (Company, Address 2, Fax) empty]]></description>
+                        <expectedResult><![CDATA[Form remains valid; no warnings or errors shown for optional fields]]></expectedResult>
+                        <testData><![CDATA[Company: <em id="isPasted">empty</em><br>Address 2: <em>empty</em><br>Fax: <em>empty</em>]]></testData>
+                    </step>
+                    <step index="5">
+                        <customFields/>
+                        <description><![CDATA[Click the &quot;Save&quot; button]]></description>
+                        <expectedResult><![CDATA[Address is successfully saved and appears in the list of saved addresses. A success message is shown.]]></expectedResult>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="235492876" key="MT-T5">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Ilgar Ibrahimli</createdBy>
+            <createdOn>2025-04-23 15:44:48 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>MT-7</key>
+                    <summary><![CDATA[Add Product to Wishlist / Məhsulu İstək Siyahısına əlavə edin]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[TC_IlgarIbrahimli_InvalidWishlist_NotLoggedIn]]></name>
+            <objective><![CDATA[To verify that a non-logged-in user cannot add a product to the wishlist and is prompted to log in.]]></objective>
+            <owner>712020:b4da1f12-5225-4945-a347-1e80228be242</owner>
+            <precondition><![CDATA[User must be logged in to add items to the Wishlist]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Open the website homepage without logging in]]></description>
+                        <expectedResult><![CDATA[Homepage loads successfully.]]></expectedResult>
+                        <testData><![CDATA[https://demo.nopcommerce.com/]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Click on the &quot;Search store&quot; text field and search for the product.]]></description>
+                        <expectedResult><![CDATA[User is able to write in the text field]]></expectedResult>
+                        <testData><![CDATA[Product: iPhone 16]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Hit the &quot;SEARCH&quot; button next to the text field]]></description>
+                        <expectedResult><![CDATA[The page refreshes to the &quot;Search&quot; page]]></expectedResult>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Scroll down and select the product - &quot; Apple iPhone 16 128GB&quot;]]></description>
+                        <expectedResult><![CDATA[The product detail page opens.]]></expectedResult>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[Click on the &quot;Add to wishlist&quot; button.]]></description>
+                        <expectedResult><![CDATA[The user is prompted to log in, and the product is not added to the wishlist.]]></expectedResult>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="235658457" key="MT-T6">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Ilgar Ibrahimli</createdBy>
+            <createdOn>2025-04-24 17:34:09 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>MT-10</key>
+                    <summary><![CDATA[Proceed to Checkout / Checkout-a keçin]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[TC_IlgarIbrahimli_ValidCheckout]]></name>
+            <objective><![CDATA[Verify that a user can successfully proceed to the checkout page, enter valid shipping details, select a payment method, and review their order up to the point before final submission.]]></objective>
+            <owner>712020:b4da1f12-5225-4945-a347-1e80228be242</owner>
+            <precondition><![CDATA[<ul><li><span style="color: rgb(23,43,77);font-size: 14.0px;font-style: normal;font-weight: 400;letter-spacing: -0.07px;orphans: 2;text-indent: 0.0px;text-transform: none;widows: 2;word-spacing: 0.0px;display: inline !important;float: none;" id="isPasted">User must have added items to their cart before proceeding to checkout.</span></li></ul>]]></precondition>
+            <priority><![CDATA[High]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Navigate to the homepage]]></description>
+                        <expectedResult><![CDATA[Homepage loads successfully]]></expectedResult>
+                        <testData><![CDATA[https://demo.nopcommerce.com/]]></testData>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Click on the &quot;Shopping cart&quot; from navigation bar]]></description>
+                        <expectedResult><![CDATA[&quot;Shopping cart&quot; page opens and user is able to view their cart in the &quot;Shopping cart&quot; section]]></expectedResult>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Scroll down and check the checkbox - &quot;I agree with the terms of service and I adhere to them unconditionally (read)&quot;]]></description>
+                        <expectedResult><![CDATA[The checkbox is checked(tick appeared)]]></expectedResult>
+                    </step>
+                    <step index="3">
+                        <customFields/>
+                        <description><![CDATA[Scroll down and click on the &quot;CHECKOUT&quot; button]]></description>
+                        <expectedResult><![CDATA[Login page opens]]></expectedResult>
+                    </step>
+                    <step index="4">
+                        <customFields/>
+                        <description><![CDATA[Enter correct login credentials and click on the &quot;LOG IN&quot; button]]></description>
+                        <expectedResult><![CDATA[User logs in and &quot;Checkout&quot; page opens&nbsp;]]></expectedResult>
+                        <testData><![CDATA[Email: manualtester99@gmail.com<br>Password: Qwerty123!]]></testData>
+                    </step>
+                    <step index="5">
+                        <customFields/>
+                        <description><![CDATA[Enter billing details under &quot;Billing address&quot;]]></description>
+                        <expectedResult><![CDATA[User is able to enter details into appropriate fields]]></expectedResult>
+                        <testData><![CDATA[State: California<br>City: Los Angeles<br>Address 1: 123 Sunset Blvd<br>Zip Code: 90001<br>Phone: +1 123 456 7890]]></testData>
+                    </step>
+                    <step index="6">
+                        <customFields/>
+                        <description><![CDATA[Click on the &quot;CONTINUE&quot; button]]></description>
+                        <expectedResult><![CDATA[&quot;Shipping method&quot; section expands]]></expectedResult>
+                    </step>
+                    <step index="7">
+                        <customFields/>
+                        <description><![CDATA[Select a shipping method out of 3 options]]></description>
+                        <expectedResult><![CDATA[User is able to select a shipping method]]></expectedResult>
+                        <testData><![CDATA[Option: Ground ($0.00)]]></testData>
+                    </step>
+                    <step index="8">
+                        <customFields/>
+                        <description><![CDATA[Click on the &quot;CONTINUE&quot; button]]></description>
+                        <expectedResult><![CDATA[&quot;Payment method&quot; section expands]]></expectedResult>
+                    </step>
+                    <step index="9">
+                        <customFields/>
+                        <description><![CDATA[Select a payment method]]></description>
+                        <expectedResult><![CDATA[User is able to select a payment method]]></expectedResult>
+                        <testData><![CDATA[Credit Card]]></testData>
+                    </step>
+                    <step index="10">
+                        <customFields/>
+                        <description><![CDATA[Click on the &quot;CONTINUE&quot; button]]></description>
+                        <expectedResult><![CDATA[&quot;Payment information&quot; section expands]]></expectedResult>
+                    </step>
+                    <step index="11">
+                        <customFields/>
+                        <description><![CDATA[Enter correct payment information details]]></description>
+                        <expectedResult><![CDATA[User is able to enter payment details]]></expectedResult>
+                        <testData><![CDATA[Cardholder name: Manual Tester<br>Card number: 4111 1111 1111 1111(dummy Visa card)<br>Expiration date: 01/2026(dummy date)<br>Card code: 123(dummy number)]]></testData>
+                    </step>
+                    <step index="12">
+                        <customFields/>
+                        <description><![CDATA[Click on the &quot;CONTINUE&quot; button]]></description>
+                        <expectedResult><![CDATA[&quot;Confirm order&quot; section expands]]></expectedResult>
+                    </step>
+                    <step index="13">
+                        <customFields/>
+                        <description><![CDATA[Review the order details]]></description>
+                        <expectedResult><![CDATA[User reviews the &quot;Billing address&quot;, &quot;Shipping address&quot;, &quot;Payment&quot;, &quot;Shipping&quot; details and ordered product]]></expectedResult>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
